@@ -1,43 +1,124 @@
 {
-  "name": "react-router",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.5.0",
-    "bootstrap": "^5.3.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.8.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-    "react-router-dom": "^6.14.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  const list = [
+    {
+        id: 1,
+        title: "Diary Milk",
+        author: "by Wonder House Books | 25 April 2018",
+        price: 24,
+        img: "https://www.bigbasket.com/media/uploads/p/xxl/100020979-2_7-cadbury-dairy-milk-chocolate-bar.jpg",
+        amount: 1,
+    },
+    {
+        id: 2,
+        title: "Kitkat",
+        author: "by Maple Press  | 1 September 2020",
+        price: 98,
+        img: "https://www.jiomart.com/images/product/original/491011052/kitkat-chocolate-share-bag-123-2-g-pack-of-8-product-images-o491011052-p491011052-0-202303140158.jpg?im=Resize=(1000,1000)",
+        amount: 1,
+    },
+    {
+        id: 3,
+        title: "Hershey",
+        author: "by Om Books Editorial Team  | 25 November 2018",
+        price: 143,
+        img: "https://www.hersheyland.in/content/dam/Hersheyland_India/en_in/products/exotic-dark/HED-Blueberry-100g-FOP.png?im=Resize=(302)",
+        amount: 1,
+    },
+    {
+        id: 4,
+        title: "Mars chocolate",
+        author: "by Wonder House Books | 25 April 2018",
+        price: 57,
+        img: "https://chocolateshopbd.com/wp-content/uploads/2021/03/mars51g-min.png",
+        amount: 1,
+    },
+    {
+        id: 5,
+        title: "Godiva chocolatier",
+        author: "by Wonder House Books  | 1 January 2018",
+        price: 149,
+        img: "data:image/jpeg;base64,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",
+        amount: 1,
+    },
+    {
+        id: 6,
+        title: "Nestlé chocolate",
+        author: "by Om Books Editorial Team | 30 September 2020",
+        price: 135,
+        img: "https://www.bigbasket.com/media/uploads/p/l/40018532_7-nestle-chocolate-classic.jpg",
+        amount: 1,
+    },
+    {
+        id: 7,
+        title: "Amul ",
+        author: "India",
+        price: 693,
+        img: "https://www.bigbasket.com/media/uploads/p/xxl/40181888_1-amul-dark-chocolate.jpg",
+        amount: 1,
+    },
+    {
+        id: 8,
+        title: "Ghirardelli",
+        author: "America",
+        price: 289,
+        img: "https://5.imimg.com/data5/JJ/ZM/NL/SELLER-4880510/1.jpg",
+        amount: 1,
+    },
+    {
+        id: 9,
+        title: "Hersheys ",
+        author: "America",
+        price: 80,
+        img: "https://m.media-amazon.com/images/I/61E+ZhSHlOL.jpg",
+        amount: 1,
+    },
+    {
+        id: 10,
+        title: "Toblerone",
+        author: "Sweet-Zearland",
+        price: 86,
+        img: "https://img.kingpowerclick.com/cdn-cgi/image/format=auto/kingpower-com/image/upload/w_640,h_640/v1510832228/prod/654221-l1.jpg",
+        amount: 1,
+    },
+    {
+        id: 11,
+        title: "Confiserie Sprüngli",
+        author: "Sweet Zearland",
+        price: 120,
+        img: "https://cdn.myportfolio.com/4007d5a0794105e8e0b55989cd1ad8f4/32ece695-dadd-4da3-a19e-a1a258508b6f_rw_1920.jpg?h=b978463f37ef5d8811680085f0341d75",
+        amount: 1,
+    },
+    {
+        id: 12,
+        title: "Pocky",
+        author: "Japan",
+        price: 157,
+        img: "https://res.cloudinary.com/nassau-candy/image/upload/c_fit,w_1000,h_1000,f_auto/v1538489205/925365.jpg",
+        amount: 1,
+    },
+    {
+        id: 13,
+        title: "Kismi",
+        author: "Shoes",
+        price: 1999,
+        img: "https://rukminim2.flixcart.com/image/850/1000/ky1vl3k0/candy-mouth-freshener/n/f/d/-original-imagadczg4ujzc9f.jpeg?q=90",
+        amount: 1,
+    },
+    {
+        id: 14,
+        title: "Pepero",
+        author: "Korian",
+        price: 1999,
+        img: "https://static.wixstatic.com/media/02b322_0454c07f05ab470aa9cf0aa5a8a3da81~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        amount: 1,
+    },
+    {
+        id: 15,
+        title: "Poccur",
+        author: "Russiya",
+        price: 1999,
+        img: "https://qph.cf2.quoracdn.net/main-qimg-d5935412216bd7c3e00d45195136232c-lq",
+        amount: 1,
+    },
+];
 }
